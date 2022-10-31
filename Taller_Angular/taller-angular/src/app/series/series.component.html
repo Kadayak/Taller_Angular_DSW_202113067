@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div class="row">
+    <h1 class="offset-1">Series</h1>
+  </div>
+  <div class="row">
+    <div class="offset-1 col-5">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Channel</th>
+            <th scope="col">Seassons</th>
+          </tr>
+        </thead>
+      <tbody id="tbody">
+        <tr *ngFor="let serie of series; let i = index">
+          <th scope="row">{{i}}</th>
+          <td (click) = "onClick(serie)" href="">
+            <button class="link">
+              {{serie.name}}
+            </button>
+          </td>
+          <td>{{serie.channel}}</td>
+          <td>{{serie.seasons}}</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>Season average: {{seasonAverage()}}</td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+    <div class="offset-1 col-4 d-none" id="card">
+      <div class="card">
+        <img src="#" alt="Card image cap" id="card-img" class="card-img-top">
+        <div class="card-body">
+          <h5 id="card-name" class="card-title">Card Title</h5>
+          <p id="card-desc" class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi suscipit, eligendi consequatur odio modi nulla. Eum provident, inventore mollitia ex qui eius officia tenetur rem voluptate enim? Eaque facere, ratione doloribus corporis aliquid non dicta repellat cumque quo asperiores ut temporibus ea nostrum illo consequuntur, pariatur quas ullam! Voluptatem, similique?</p>
+          <a href="#" id="card-link" class="btn btn-primary">Go there</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
